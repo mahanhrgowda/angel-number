@@ -188,86 +188,86 @@ As a master number, 11 amplifies intuition, enlightenment, and inspiration, spir
 }
 
 repeating_groups = {
-    "111": "Angel Number 111: Signifies manifestation, new beginnings, and alignment with your thoughts. Your ideas are coming to fruition.",
-    "222": "Angel Number 222: Represents balance, harmony, and faith. Trust that everything is unfolding as it should.",
-    "333": "Angel Number 333: Indicates creativity, growth, and support from ascended masters. Express yourself freely.",
-    "444": "Angel Number 444: Symbolizes protection, stability, and the presence of angels. You are supported.",
-    "555": "Angel Number 555: Signifies change, transformation, and adventure. Embrace the shifts coming your way.",
-    "666": "Angel Number 666: Reminds you to balance your thoughts and focus on spiritual rather than material concerns.",
-    "777": "Angel Number 777: Represents spiritual awakening, divine guidance, and good fortune.",
-    "888": "Angel Number 888: Symbolizes abundance, success, and the flow of karma.",
-    "999": "Angel Number 999: Indicates completion, letting go, and humanitarian service.",
-    "1111": "Angel Number 1111: Amplifies spiritual awakening, intuition, and new opportunities.",
-    "2222": "Angel Number 2222: Emphasizes harmony, patience, and the manifestation of dreams.",
-    "3333": "Angel Number 3333: Boosts creativity and self-expression on a larger scale.",
-    "4444": "Angel Number 4444: Represents strong foundations and the rewards of hard work.",
-    "5555": "Angel Number 5555: Signals major life changes and the need for adaptability.",
-    "6666": "Angel Number 6666: Focuses on harmony in home and relationships, nurturing.",
-    "7777": "Angel Number 7777: Enhances inner wisdom and mystical experiences.",
-    "8888": "Angel Number 8888: Signifies infinite abundance and personal power.",
-    "9999": "Angel Number 9999: Marks the end of a cycle and spiritual enlightenment."
+    "111": "Angel Number 111: Signifies manifestation, new beginnings, and alignment with your thoughts. Your ideas are coming to fruition. ✨",
+    "222": "Angel Number 222: Represents balance, harmony, and faith. Trust that everything is unfolding as it should. ⚖️",
+    "333": "Angel Number 333: Indicates creativity, growth, and support from ascended masters. Express yourself freely. 🎨",
+    "444": "Angel Number 444: Symbolizes protection, stability, and the presence of angels. You are supported. 🏗️",
+    "555": "Angel Number 555: Signifies change, transformation, and adventure. Embrace the shifts coming your way. 🌪️",
+    "666": "Angel Number 666: Reminds you to balance your thoughts and focus on spiritual rather than material concerns. ❤️",
+    "777": "Angel Number 777: Represents spiritual awakening, divine guidance, and good fortune. 🔮",
+    "888": "Angel Number 888: Symbolizes abundance, success, and the flow of karma. 💰",
+    "999": "Angel Number 999: Indicates completion, letting go, and humanitarian service. 🌍",
+    "1111": "Angel Number 1111: Amplifies spiritual awakening, intuition, and new opportunities. ✨",
+    "2222": "Angel Number 2222: Emphasizes harmony, patience, and the manifestation of dreams. ⚖️",
+    "3333": "Angel Number 3333: Boosts creativity and self-expression on a larger scale. 🎨",
+    "4444": "Angel Number 4444: Represents strong foundations and the rewards of hard work. 🏗️",
+    "5555": "Angel Number 5555: Signals major life changes and the need for adaptability. 🌪️",
+    "6666": "Angel Number 6666: Focuses on harmony in home and relationships, nurturing. ❤️",
+    "7777": "Angel Number 7777: Enhances inner wisdom and mystical experiences. 🔮",
+    "8888": "Angel Number 8888: Signifies infinite abundance and personal power. 💰",
+    "9999": "Angel Number 9999: Marks the end of a cycle and spiritual enlightenment. 🌍"
 }
 
 clock_meanings = {
-    '00:00': "Mentally prepare for an absence or loss. Prepares for potential loss or absence.",
-    '01:01': "You feel the need to isolate yourself. Indicates a desire for isolation.",
-    '01:10': "Someone watches over you with protective love. Suggests protective love from someone.",
-    '01:11': "Manifestation and new beginnings. Align your thoughts positively.",
-    '02:02': "You won't achieve anything on your own. Highlights the need for collaboration.",
-    '02:20': "Luck is definitely on your side. Indicates favorable luck.",
-    '02:22': "Balance and harmony. Trust the process.",
-    '03:03': "You manage to formulate your ideas accurately. Reflects clarity in expressing ideas.",
-    '03:30': "Someone loves you in secret. Suggests hidden affection.",
-    '03:33': "Creativity and growth. Support from ascended masters.",
-    '04:04': "Your desire for power may be a sign of a lack of grounding. Warns of lack of grounding.",
-    '04:40': "Will you be remorseful after this betrayal? Questions remorse after betrayal.",
-    '04:44': "Protection and stability. Angels are with you.",
-    '05:05': "Your current creativity is matched only by your thirst for life. Highlights creativity and vitality.",
-    '05:50': "Smile! A pleasant surprise awaits you. Promises a pleasant surprise.",
-    '05:55': "Change and transformation. Embrace shifts.",
-    '06:06': "Your instinct guides you to the right people. Instinct leads to beneficial connections.",
-    '07:07': "Maturity or lucidity? Either way, you change your perspective. Shift in perspective.",
-    '08:08': "Let justice be done! Calls for justice.",
-    '09:09': "Seek to cultivate yourself to enrich your spiritual life. Encourages spiritual enrichment.",
-    '10:01': "There is still time to catch up with the loved one. Opportunity to reconnect.",
-    '10:10': "You gain confidence and the results are positive for your career. Career success through confidence.",
-    '11:11': "Your fierce ambition can take you to the highest peaks. Ambition leads to achievements.",
-    '12:12': "Wisdom wins you over! You renounce material temptations. Choosing wisdom over material.",
-    '12:21': "Beware! Gossip and betrayals lie in wait for you. Warns of gossip and betrayal.",
-    '13:13': "A change of cycle is coming. Upcoming life cycle change.",
-    '13:31': "Avoid any new initiatives for now. Advises against new projects.",
-    '14:14': "Things are moving but still lacking stability. Progress with instability.",
-    '14:41': "You have the feeling of having lost an object that is dear to you. Sense of loss.",
-    '15:15': "A consuming passion prevents you from seeing clearly. Passion clouding judgment.",
-    '15:51': "Someone loves you, but is it really mutual? Questions mutuality of love.",
-    '16:16': "Your pride pushes you to isolate yourself. Pride leads to isolation.",
-    '17:17': "An overflowing creative energy animates you. High creative energy.",
-    '18:18': "You are more sensitive to the secrets of the soul and the vagaries of fate. Heightened sensitivity.",
-    '19:19': "Patience will bring you success. Encourages patience.",
-    '20:02': "You are about to receive good news. Good news incoming.",
-    '20:20': "Balance in relationships. Harmony in partnerships.",
-    '21:12': "Success is near, but be cautious. Caution in success.",
-    '21:21': "Achievement and fulfillment. Goals being met.",
-    '22:22': "Great ambitions realized. Master builder energy.",
-    '23:23': "End of a phase, new beginning. Completion.",
-    '23:32': "Spiritual guidance is strong. Trust your intuition."
+    '00:00': "Mentally prepare for an absence or loss. Prepares for potential loss or absence. ⏳",
+    '01:01': "You feel the need to isolate yourself. Indicates a desire for isolation. 🏞️",
+    '01:10': "Someone watches over you with protective love. Suggests protective love from someone. ❤️",
+    '01:11': "Manifestation and new beginnings. Align your thoughts positively. 🌟",
+    '02:02': "You won't achieve anything on your own. Highlights the need for collaboration. 🤝",
+    '02:20': "Luck is definitely on your side. Indicates favorable luck. 🍀",
+    '02:22': "Balance and harmony. Trust the process. ⚖️",
+    '03:03': "You manage to formulate your ideas accurately. Reflects clarity in expressing ideas. 💡",
+    '03:30': "Someone loves you in secret. Suggests hidden affection. 💕",
+    '03:33': "Creativity and growth. Support from ascended masters. 🎨",
+    '04:04': "Your desire for power may be a sign of a lack of grounding. Warns of lack of grounding. 🌱",
+    '04:40': "Will you be remorseful after this betrayal? Questions remorse after betrayal. 😔",
+    '04:44': "Protection and stability. Angels are with you. 🏗️",
+    '05:05': "Your current creativity is matched only by your thirst for life. Highlights creativity and vitality. 🔥",
+    '05:50': "Smile! A pleasant surprise awaits you. Promises a pleasant surprise. 😊",
+    '05:55': "Change and transformation. Embrace shifts. 🌪️",
+    '06:06': "Your instinct guides you to the right people. Instinct leads to beneficial connections. 🧭",
+    '07:07': "Maturity or lucidity? Either way, you change your perspective. Shift in perspective. 🔄",
+    '08:08': "Let justice be done! Calls for justice. ⚖️",
+    '09:09': "Seek to cultivate yourself to enrich your spiritual life. Encourages spiritual enrichment. 🌿",
+    '10:01': "There is still time to catch up with the loved one. Opportunity to reconnect. ⏰",
+    '10:10': "You gain confidence and the results are positive for your career. Career success through confidence. 📈",
+    '11:11': "Your fierce ambition can take you to the highest peaks. Ambition leads to achievements. 🏔️",
+    '12:12': "Wisdom wins you over! You renounce material temptations. Choosing wisdom over material. 🧠",
+    '12:21': "Beware! Gossip and betrayals lie in wait for you. Warns of gossip and betrayal. ⚠️",
+    '13:13': "A change of cycle is coming. Upcoming life cycle change. 🔄",
+    '13:31': "Avoid any new initiatives for now. Advises against new projects. 🚫",
+    '14:14': "Things are moving but still lacking stability. Progress with instability. 🏃",
+    '14:41': "You have the feeling of having lost an object that is dear to you. Sense of loss. 😞",
+    '15:15': "A consuming passion prevents you from seeing clearly. Passion clouding judgment. 🔥",
+    '15:51': "Someone loves you, but is it really mutual? Questions mutuality of love. ❓",
+    '16:16': "Your pride pushes you to isolate yourself. Pride leads to isolation. 🏞️",
+    '17:17': "An overflowing creative energy animates you. High creative energy. 🎨",
+    '18:18': "You are more sensitive to the secrets of the soul and the vagaries of fate. Heightened sensitivity. 🔮",
+    '19:19': "Patience will bring you success. Encourages patience. ⏳",
+    '20:02': "You are about to receive good news. Good news incoming. 📩",
+    '20:20': "Balance in relationships. Harmony in partnerships. ❤️",
+    '21:12': "Success is near, but be cautious. Caution in success. ⚠️",
+    '21:21': "Achievement and fulfillment. Goals being met. 🏆",
+    '22:22': "Great ambitions realized. Master builder energy. 🛠️",
+    '23:23': "End of a phase, new beginning. Completion. 🌅",
+    '23:32': "Spiritual guidance is strong. Trust your intuition. 🙏"
 }
 
 st.title("Angel Number and Special Times Explorer ✨")
 
 st.markdown("""
-This app allows you to input your birth date, time, and timezone to calculate your personal angel number (life path number) with a detailed description. It also provides lengthy explanations of repeating master numbers up to 9999, interpretations of special clock times (including symmetrical and repeating patterns), and checks if your birth time matches any special angel times across multiple timezones, displaying them in 12-hour format with relevant meanings if matched.
+This app allows you to input your birth date, time, and timezone to calculate your personal angel number (life path number) with a detailed description. It also provides lengthy explanations of repeating master numbers up to 9999, interpretations of special clock times (including symmetrical and repeating patterns), and checks if your birth time matches any special angel times across multiple timezones, displaying them in 12-hour format with relevant meanings if matched. 🌟⏰
 """)
 
 mode = st.selectbox("Mode", ["Birth", "Real Time"], index=0)
 
-selected_tz = st.selectbox("Select Timezone (default IST)", options=pytz.common_timezones, index=pytz.common_timezones.index('Asia/Kolkata'))
+selected_tz = st.selectbox("Select Timezone (default IST) 🌍", options=pytz.common_timezones, index=pytz.common_timezones.index('Asia/Kolkata'))
 
 local_tz = pytz.timezone(selected_tz)
 
 if mode == "Birth":
     birth_date = st.date_input("Birth Date 📅", min_value=datetime.date(1900, 1, 1), max_value=datetime.date(2100, 12, 31))
-    birth_time = st.time_input("Birth Time ⏱️")
+    birth_time = st.time_input("Birth Time ⏱️", step=60)
     if birth_date and birth_time:
         dt = datetime.datetime(birth_date.year, birth_date.month, birth_date.day, birth_time.hour, birth_time.minute)
         dt_local = local_tz.localize(dt)
@@ -295,8 +295,8 @@ else:
         st.rerun()
     now = datetime.datetime.now(local_tz)
     dt_local = now
-    st.write(f"Current time in {selected_tz}: {now.strftime('%I:%M %p')}")
-    st.info("In Real Time mode, angel number calculation is not applicable (requires birth date). Focus is on current time checks.")
+    st.write(f"Current time in {selected_tz}: {now.strftime('%I:%M %p')} ⏰")
+    st.info("In Real Time mode, angel number calculation is not applicable (requires birth date). Focus is on current time checks. 📌")
 
 # Collapsible sections using st.expander
 with st.expander("Repeating Master Numbers till 9999 📜"):
