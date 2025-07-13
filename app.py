@@ -296,7 +296,26 @@ else:
     now = datetime.datetime.now(local_tz)
     dt_local = now
     st.write(f"Current time in {selected_tz}: {now.strftime('%I:%M %p')} ⏰")
-    st.info("In Real Time mode, angel number calculation is not applicable (requires birth date). Focus is on current time checks. 📌")
+    st.info("In Real Time mode, angel numbers are calculated based on the current date and time. 📌")
+    # Calculate angel number from current date
+    def reduce_number(n):
+        while n > 9 and n not in [11, 22, 33]:
+            n = sum(int(d) for d in str(n))
+        return n
+    month_sum = sum(int(d) for d in str(now.month))
+    day_sum = sum(int(d) for d in str(now.day))
+    year_sum = sum(int(d) for d in str(now.year))
+    total = month_sum + day_sum + year_sum
+    angel_num_date = reduce_number(total)
+    st.header(f"Angel Number from Current Date: {angel_num_date} 🌟")
+    st.write(angel_descriptions.get(angel_num_date, "No description available."))
+    # Angelic numerology for current time
+    hour_sum = sum(int(d) for d in str(now.hour))
+    min_sum = sum(int(d) for d in str(now.minute))
+    total_time = hour_sum + min_sum
+    angel_num_time = reduce_number(total_time)
+    st.header(f"Angel Number from Current Time: {angel_num_time} ⏰")
+    st.write(angel_descriptions.get(angel_num_time, "No description available."))
 
 # Collapsible sections using st.expander
 with st.expander("Repeating Master Numbers till 9999 📜"):
