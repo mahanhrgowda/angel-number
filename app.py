@@ -1,6 +1,7 @@
 import streamlit as st
 import datetime
 import pytz
+import time
 
 # Descriptions for personal angel numbers (life path 1-9,11,22,33)
 angel_descriptions = {
@@ -61,10 +62,10 @@ clock_meanings = {
     '17:17': "⏰ 17:17, under Lauviah, reveals insights and victory ✨. Numerology of 17 (8) brings power. Tarot: The Star – hope and inspiration. Urges intuition and triumph over challenges. 🌟 In love, clarity; in work, succeed; financially, abundance. Divine revelations guide your success.",
     '18:18': "⏰ 18:18, with Caliel, upholds justice and truth 💰. Numerology of 18 (9) completes cycles. Tarot: The Moon – illusion and intuition. Calls for discernment and absolution. 🌙 In relationships, honesty; in career, fairness; in money, resolve. Angels support your quest for truth.",
     '19:19': "⏰ 19:19, guarded by Leuviah, offers expiation and intelligence 🌍. Numerology of 19 (10/1) new starts. Tarot: The Sun – joy and success. Signals forgiveness and wisdom. 😇 In love, heal; in work, innovate; financially, prosper. Embrace light and positive renewal.",
-    '20:20': "⏰ 20:20, with Pahaliah, redeems and vocation ⚖️. Numerology of 20 (2) harmony. Tarot: Judgement – rebirth and calling. Urges spiritual purpose and liberation. 🌌 In relationships, balance; in career, align. inspiration.",
+    '20:20': "⏰ 20:20, with Pahaliah, redeems and vocation ⚖️. Numerology of 20 (2) harmony. Tarot: Judgement – rebirth and calling. Urges spiritual purpose and liberation. 🌌 In relationships, balance; in career, follow calling; in money, align. Divine redemption supports your path.",
     '21:21': "⏰ 21:21, under Nelchael, thirsts for knowledge 🚀. Numerology of 21 (3) creativity. Tarot: The World – completion and fulfillment. Calls for learning and protection. 🎨 In love, express; in work, study; financially, grow. Conquer challenges with wisdom and faith.",
-    '22:22': "⏰ 22:22, with Ieiaiel, brings fame and fortune 🛠. Numerology of 22 master builder. Tarot: The Fool – new adventures. Signals recognition and mastery. ✨ In relationships, harmony; in career, achieve; in money, abundance. Angels amplify your building power.",
-    '23:23': "⏰ 23:23, guarded by Melahel, heals and protects 🌿. Numerology of 23 (5) change. Tarot: The Magician – manifestation. Urges natural healing and courage. 😇 In love, nurture; in work, transform; financially, adapt. Divine protection aids your evolution."
+    '22:22': "⏰ 22:22, with Ieiaiel, brings fame and fortune 🛠️. Numerology of 22 master builder. Tarot: The Fool (cycle back) – new adventures. Signals recognition and mastery. ✨ In relationships, harmony; in career, achieve; in money, abundance. Angels amplify your building power.",
+    '23:23': "⏰ 23:23, guarded by Melahel, heals and protects 🌿. Numerology of 23 (5) change. Tarot: The Magician (cycle) – manifestation. Urges natural healing and courage. 😇 In love, nurture; in work, transform; financially, adapt. Divine protection aids your evolution."
 }
 
 st.title("Angel Number and Special Times Explorer ✨")
@@ -73,56 +74,68 @@ st.markdown("""
 This app allows you to input your birth date, time, and timezone to calculate your personal angel number (life path number) with a detailed description. It also provides lengthy explanations of repeating master numbers up to 9999, interpretations of special clock times (including symmetrical and repeating patterns), and checks if your birth time matches any special angel times across multiple timezones, displaying them in 12-hour format with relevant meanings if matched.
 """)
 
-selected_tz = st.selectbox("Select Birth Timezone (default IST)", options=pytz.common_timezones, index=pytz.common_timezones.index('Asia/Kolkata'))
+mode = st.selectbox("Mode", ["Birth", "Real Time"], index=0)
 
-birth_date = st.date_input("Birth Date 📅")
+selected_tz = st.selectbox("Select Timezone (default IST)", options=pytz.common_timezones, index=pytz.common_timezones.index('Asia/Kolkata'))
 
-birth_time = st.time_input("Birth Time ⏱️")
+local_tz = pytz.timezone(selected_tz)
 
-if birth_date and birth_time:
-    birth_dt = datetime.datetime(birth_date.year, birth_date.month, birth_date.day, birth_time.hour, birth_time.minute)
-    local_tz = pytz.timezone(selected_tz)
-    birth_dt_local = local_tz.localize(birth_dt)
+if mode == "Birth":
+    birth_date = st.date_input("Birth Date 📅")
+    birth_time = st.time_input("Birth Time ⏱️")
+    if birth_date and birth_time:
+        dt = datetime.datetime(birth_date.year, birth_date.month, birth_date.day, birth_time.hour, birth_time.minute)
+        dt_local = local_tz.localize(dt)
+        # Calculate angel number
+        def reduce_number(n):
+            while n > 9 and n not in [11, 22, 33]:
+                n = sum(int(d) for d in str(n))
+            return n
+        month_sum = sum(int(d) for d in str(birth_date.month))
+        day_sum = sum(int(d) for d in str(birth_date.day))
+        year_sum = sum(int(d) for d in str(birth_date.year))
+        total = month_sum + day_sum + year_sum
+        angel_num = reduce_number(total)
+        st.header(f"Your Angel Number: {angel_num} 🌟")
+        st.write(angel_descriptions.get(angel_num, "No description available."))
+else:
+    # Real Time mode
+    if st.button("Refresh 🔄"):
+        st.rerun()
+    now = datetime.datetime.now(local_tz)
+    dt_local = now
+    st.write(f"Current time in {selected_tz}: {now.strftime('%I:%M %p')}")
+    # No angel number in real time mode, as it's based on birth date
+    st.info("In Real Time mode, angel number calculation is not applicable (requires birth date). Focus is on current time checks.")
 
-    # Calculate angel number
-    def reduce_number(n):
-        while n > 9 and n not in [11, 22, 33]:
-            n = sum(int(d) for d in str(n))
-        return n
+# Common sections
+st.header("Repeating Master Numbers till 9999 📜")
+for group, desc in repeating_groups.items():
+    st.subheader(group)
+    st.write(desc)
 
-    month_sum = sum(int(d) for d in str(birth_date.month))
-    day_sum = sum(int(d) for d in str(birth_date.day))
-    year_sum = sum(int(d) for d in str(birth_date.year))
-    total = month_sum + day_sum + year_sum
-    angel_num = reduce_number(total)
+st.header("Explanations Regarding Times Like 1:11, 2:22, etc., Expanded for Symmetry ⏰")
+for time_key, meaning in clock_meanings.items():
+    display_time = time_key.lstrip('0') if time_key.startswith('0') else time_key
+    st.write(f"**{display_time}**: {meaning}")
 
-    st.header(f"Your Angel Number: {angel_num} 🌟")
-    st.write(angel_descriptions.get(angel_num, "No description available."))
+st.header("Time in Multiple Timezones and Special Matches 🔄")
+timezones_list = ['UTC', 'America/New_York', 'America/Los_Angeles', 'Europe/London', 'Europe/Paris', 'Asia/Tokyo', 'Australia/Sydney', 'Asia/Kolkata']
+special_times = set(clock_meanings.keys())
 
-    # Repeating master numbers
-    st.header("Repeating Master Numbers till 9999 📜")
-    for group, desc in repeating_groups.items():
-        st.subheader(group)
-        st.write(desc)
+for tz in set(timezones_list + [selected_tz]):
+    target_tz = pytz.timezone(tz)
+    converted_dt = dt_local.astimezone(target_tz)
+    conv_time_str = converted_dt.strftime('%H:%M')
+    display_time = converted_dt.strftime('%I:%M %p')  # 12-hour format with AM/PM
+    is_special = conv_time_str in special_times
+    emoji = " ✨ Special Angel Time!" if is_special else ""
+    st.write(f"**{tz}**: {display_time}{emoji}")
+    if is_special:
+        st.write(clock_meanings[conv_time_str])
 
-    # Special clock times explanations
-    st.header("Explanations Regarding Times Like 1:11, 2:22, etc., Expanded for Symmetry ⏰")
-    for time_key, meaning in clock_meanings.items():
-        display_time = time_key.lstrip('0') if time_key.startswith('0') else time_key
-        st.write(f"**{display_time}**: {meaning}")
-
-    # Birth time across multiple timezones
-    st.header("Your Birth Time in Multiple Timezones and Special Matches 🔄")
-    timezones_list = ['UTC', 'America/New_York', 'America/Los_Angeles', 'Europe/London', 'Europe/Paris', 'Asia/Tokyo', 'Australia/Sydney', 'Asia/Kolkata']
-    special_times = set(clock_meanings.keys())
-
-    for tz in set(timezones_list + [selected_tz]):
-        target_tz = pytz.timezone(tz)
-        converted_dt = birth_dt_local.astimezone(target_tz)
-        conv_time_str = converted_dt.strftime('%H:%M')
-        display_time = converted_dt.strftime('%I:%M %p')  # 12-hour format with AM/PM
-        is_special = conv_time_str in special_times
-        emoji = " ✨ Special Angel Time!" if is_special else ""
-        st.write(f"**{tz}**: {display_time}{emoji}")
-        if is_special:
-            st.write(clock_meanings[conv_time_str])
+if mode == "Real Time":
+    # Auto-refresh every 60 seconds (1 min interval)
+    # Note: This will block UI interactions during sleep; for better experience, use manual refresh or run with external timer.
+    time.sleep(60)
+    st.rerun()
